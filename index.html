@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onload="document.documentElement.requestFullscreen?.()">
+  <!-- ACCUEIL -->
+  <section id="page-accueil" class="page active">
+    <div class="cross-nav">
+      <button class="arrow arrow-top" onclick="goTo('page-piege')">↑</button>
+      <div class="middle-row">
+        <button class="arrow arrow-left" onclick="goTo('page-left')">←</button>
+        <div class="content">
+          <div id="text-acceuil">
+
+            <h1>Bienvenue</h1>
+            <p>Utilisez les flèches pour naviguer et amusez-vous !</p>
+          </div>
+        </div>
+        <button class="arrow arrow-right" onclick="goTo('page-right')">→</button>
+      </div>
+      <button class="arrow arrow-bottom" onclick="goTo('page-piege')">↓</button>
+    </div>
+  </section>
+
+  <!-- PROFIL (gauche) -->
+  <section id="page-left" class="page">
+    <div class="cross-nav">
+      <button class="arrow arrow-top" onclick="goTo('page-piege')">↑</button>
+      <div class="middle-row">
+        <button class="arrow arrow-left" onclick="goTo('page-piege')">←</button>
+        <div class="content scrollable-content parcours" onscroll="handleShadow(this)">
+          <h1>Profil</h1>
+          <img src="img/pexels-photo-771742.webp" alt="profil" class="fit-picture" />
+          <div>
+            <p>
+              Bonjour, bienvenue sur la page de mon profil. J’ai créé ce portfolio pour présenter mes projets de façon
+              plus
+              visuelle et organisée que sur GitHub.
+            </p>
+            <br>
+            <p>
+              J’ai découvert l’univers de l’informatique relativement tard. Avant ma formation avec <a
+                href="https://openclassrooms.com" target="_blank"><strong>OpenClassrooms</strong></a> , je ne
+              connaissais ni JavaScript, ni Python, ni même
+              PHP.
+            </p>
+            <br>
+
+            <p>
+              J’ai débuté avec la formation <a href="https://openclassrooms.com/fr/paths/717-developpeur-web"
+                target="_blank"><strong>Developpeur Web</strong></a> d’OpenClassrooms, qui m’a donné de
+              solides
+              bases. Souhaitant aller plus loin, j’ai ensuite suivi une initiation au PHP avec la <a
+                href="https://3wacademy.fr/" target="_blank"><strong>3W Academy</strong></a>.
+            </p>
+            <br>
+
+            <p>
+              Ces deux formations ont été possibles grâce à un accompagnement Pôle Emploi. Ensuite, je suis retourné à
+              la vie
+              active, notamment en intérim.
+            </p>
+            <br>
+
+            <p>
+              Durant mon temps libre, j’ai continué à apprendre en autodidacte. J’ai exploré le back-end avec Python et
+              Django,
+              puis approfondi mes connaissances en PHP grâce au framework Symfony.
+            </p>
+            <br>
+
+            <p>
+              J’ai ensuite intégré la <a href="https://www.epitech.eu/fr/programmes/pre-mscs/"
+                target="_blank"><strong>pré-MSC
+                  d’Epitech</strong></a> pour une session de 3 mois, où j’ai découvert les bases de Linux et Java.
+            </p>
+            <br>
+
+            <p>
+              N’ayant pas trouvé d’alternance à l’issue de cette session, j’ai repris un travail salarié, tout en
+              continuant à me
+              former par moi-même.
+            </p>
+            <br>
+
+            <p>
+              Aujourd’hui, je poursuis mon apprentissage en <strong>autodidacte</strong> depuis plus d’un an, en
+              consolidant mes
+              compétences fullstack et en réalisant divers projets personnels.
+            </p>
+          </div>
+
+        </div>
+        <button class="arrow arrow-right" onclick="goTo('page-accueil')">→</button>
+      </div>
+      <button class="arrow arrow-bottom" onclick="goTo('page-bottom')">↓</button>
+    </div>
+  </section>
+
+  <!-- PROJETS (droite) -->
+  <section id="page-right" class="page">
+    <div class="cross-nav">
+      <button class="arrow arrow-top" onclick="goTo('page-right-top')">↑</button>
+      <div class="middle-row">
+        <button class="arrow arrow-left" onclick="goTo('page-accueil')">←</button>
+        <div class="content scrollable-content" onscroll="handleShadow(this)">
+          <h2>Mes projets</h2>
+
+          <h3>OpenClassrooms</h3>
+          <div class="projects-grid">
+            <div class="project">
+              <a href="https://eyery21.github.io/p2_vaury_guillaume/" target="_blank">
+                <div class="image-container"><img src="img/booki.webp" alt="Booki" class="fit-picture" /></div>
+                <p><strong>Booki</strong><br><small>HTML/CSS</small></p>
+              </a>
+            </div>
+            <div class="project">
+              <a href="https://github.com/Eyery21/kanap-p5" target="_blank">
+                <div class="image-container"><img src="img/kanap.webp" alt="Kanap" class="fit-picture" /></div>
+                <p><strong>Kanap</strong><br><small>JS</small></p>
+              </a>
+            </div>
+            <div class="project">
+              <a href="https://github.com/Eyery21/p7_GROUPOMANIA" target="_blank">
+                <div class="image-container"><img src="img/screen-post.png" alt="Groupomania" class="fit-picture" />
+                </div>
+                <p><strong>Groupomania</strong><br><small>Vue.js / Node.js</small></p>
+              </a>
+            </div>
+          </div>
+
+          <h3>Projets persos</h3>
+          <div class="projects-grid">
+            <div class="project">
+              <a href="https://github.com/Eyery21/Reservation_Disk" target="_blank">
+                <div class="image-container"><img src="img/reservation_disk.PNG" alt="Reservation Disk"
+                    class="fit-picture" /></div>
+                <p><strong>Reservation Disk</strong><br><small>PHP</small></p>
+              </a>
+            </div>
+            <div class="project">
+              <a href="https://github.com/Eyery21/i_love_book" target="_blank">
+                <div class="image-container"><img src="img/ilovebook.PNG" alt="I Love Book" class="fit-picture" /></div>
+                <p><strong>I Love Book</strong><br><small>Symfony</small></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <button class="arrow arrow-right" onclick="goTo('page-piege')">→</button>
+      </div>
+      <button class="arrow arrow-right" onclick="goTo('page-piege')">↓</button>
+
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES (haut droite) -->
+  <section id="page-right-top" class="page">
+    <div class="cross-nav">
+      <button class="arrow arrow-left" onclick="goTo('page-piege')">↑</button>
+
+      <div class="middle-row">
+        <button class="arrow arrow-left" onclick="goTo('page-piege')">←</button>
+        <div class="content scrollable-content" onscroll="handleShadow(this)">
+          <h2>Compétences</h2>
+
+          <h3>Frontend</h3>
+          <div class="skills-grid">
+            <div class="skill"><img src="img/html.png" alt="HTML" class="skill-icon" />
+              <p>HTML</p>
+            </div>
+            <div class="skill"><img src="img/css.svg" alt="CSS" class="skill-icon" />
+              <p>CSS</p>
+            </div>
+            <div class="skill"><img src="img/js.webp" alt="JavaScript" class="skill-icon" />
+              <p>JavaScript</p>
+            </div>
+            <div class="skill"><img src="img/vue.png" alt="Vue.js" class="skill-icon" />
+              <p>Vue.js</p>
+            </div>
+          </div>
+
+          <h3>Backend</h3>
+          <div class="skills-grid">
+            <div class="skill"><img src="img/node.jpg" alt="Node.js" class="skill-icon" />
+              <p>Node.js</p>
+            </div>
+            <div class="skill"><img src="img/symfony.png" alt="Symfony" class="skill-icon" />
+              <p>Symfony</p>
+            </div>
+            <div class="skill"><img src="img/django.png" alt="Django" class="skill-icon" />
+              <p>Django</p>
+            </div>
+            <div class="skill"><img src="img/mysql.png" alt="MySQL" class="skill-icon" />
+              <p>MySQL</p>
+            </div>
+            <div class="skill"><img src="img/phpmyadmin.png" alt="PhpMyAdmin" class="skill-icon" />
+              <p>PhpMyAdmin</p>
+            </div>
+          </div>
+
+          <h3>Outils</h3>
+          <div class="skills-grid">
+            <div class="skill"><img src="img/vscode.png" alt="VS Code" class="skill-icon" />
+              <p>VS Code</p>
+            </div>
+            <div class="skill"><img src="img/git.jpg" alt="Git" class="skill-icon" />
+              <p>Git</p>
+            </div>
+            <div class="skill"><img src="img/claude.png" alt="Claude" class="skill-icon" />
+              <p>Claude</p>
+            </div>
+            <div class="skill"><img src="img/chat.png" alt="ChatGPT" class="skill-icon" />
+              <p>ChatGPT</p>
+            </div>
+          </div>
+
+          <h3>Languages</h3>
+          <div class="skills-grid">
+            <div class="skill"><img src="img/js.webp" alt="JavaScript" class="skill-icon" />
+              <p>JavaScript</p>
+            </div>
+            <div class="skill"><img src="img/php.svg" alt="PHP" class="skill-icon" />
+              <p>PHP</p>
+            </div>
+            <div class="skill"><img src="img/Java.webp" alt="Java" class="skill-icon" />
+              <p>Java</p>
+            </div>
+            <div class="skill"><img src="img/Pythonsvg.png" alt="Python" class="skill-icon" />
+              <p>Python</p>
+            </div>
+            <div class="skill"><img src="img/mysql.png" alt="MySQL" class="skill-icon" />
+              <p>MySQL</p>
+            </div>
+          </div>
+        </div>
+        <button class="arrow arrow-left" onclick="goTo('page-piege')">→</button>
+
+      </div>
+
+      <button class="arrow arrow-bottom" onclick="goTo('page-right')">↓</button>
+    </div>
+  </section>
+
+  <!-- CONTACT (bas) -->
+  <section id="page-bottom" class="page">
+    <div class="cross-nav">
+      <button class="arrow arrow-top" onclick="goTo('page-top')">↑</button>
+      <div class="middle-row">
+        <button class="arrow arrow-left" onclick="goTo('page-piege')">←</button>
+        <div class="content contact-section">
+
+          <h2>Me contacter</h2>
+          <div class="contact-card">
+            <img src="img/discord.webp" alt="Discord" class="contact-icon" />
+            <div class="contact-info">
+              <span class="contact-label">Discord</span>
+              <span class="contact-value">@lecodageur</span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <img src="img/git.jpg" alt="GitHub" class="contact-icon" />
+            <div class="contact-info">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/Eyery21" target="_blank" class="contact-value">github.com/Eyery21</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <img src="img/mail.png" alt="Email" class="contact-icon" />
+            <div class="contact-info">
+              <span class="contact-label">Email</span>
+              <a href="mailto:guillaury.gv40@gmail.com" class="contact-value">guillaury.gv40@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <button class="arrow arrow-right" onclick="goTo('page-piege')">→</button>
+      </div>
+      <button class="arrow arrow-bottom" onclick="goTo('page-piege')">↓</button>
+    </div>
+  </section>
+
+
+  <section id="page-piege" class="page">
+    <div class="cross-nav">
+      <div class="arrow arrow-top">↑</div>
+      <div class="middle-row">
+        <div class="arrow arrow-left">←</div>
+        <div class="content">
+          <h1>Erreur !</h1>
+          <p>Tu n’aurais peut-être pas dû venir ici...</p>
+          <p>Redirection en cours...</p>
+        </div>
+        <div class="arrow arrow-right">→</div>
+      </div>
+      <div class="arrow arrow-bottom">↓</div>
+    </div>
+  </section>
+  <div class="article-nav">
+    <button onclick="goTo('page-accueil')">Retour à l’accueil</button>
+  </div>  
+  <!-- JS -->
+  <script src="navigation.js"></script>
+
+</body>
+
+</html>
